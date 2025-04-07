@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.assistant-regular {
+  font-family: "Assistant", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 349 68% 34%;
+    --primary-foreground: 0 85.7% 97.3%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 72.2% 50.6%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 8%;
+    --foreground: -11 6.800000000000001% 96.9%;
+
+    --muted: -11 51.68000000000001% 21.28%;
+    --muted-foreground: -11 6.800000000000001% 53.8%;
+
+    --popover: -11 65% 13.68%;
+    --popover-foreground: -11 6.800000000000001% 96.9%;
+
+    --card: 0 0% 12%;
+    --card-foreground: -11 6.800000000000001% 96.9%;
+
+    --border: 0 0% 12%;
+    --input: -11 51.68000000000001% 21.28%;
+
+    --primary: -11 68% 38%;
+    --primary-foreground: -11 6.800000000000001% 96.9%;
+
+    --secondary: -11 51.68000000000001% 21.28%;
+    --secondary-foreground: -11 6.800000000000001% 96.9%;
+
+    --accent: -11 51.68000000000001% 21.28%;
+    --accent-foreground: -11 6.800000000000001% 96.9%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: -11 6.800000000000001% 96.9%;
+
+    --ring: -11 68% 38%;
+
+  }
+}
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none !important;
+}
+
+input[type="password"] + .password-icon {
+  display: none !important;
+}
+
+:root {
+  --green: rgb(74, 222, 128);
+  --teal:#2dd4bf;
+  --indigo: #818cf8;
+  --blue: #28b6f9;
+  --fusia: #e879f9;
+  --purple: #a855f7;
+  --yellow: #facc15;
+  --gray: #d1d5dbc2;
+  --red: #df3962;
+  --red-banhcafe: #BA0C2F;
+  --red-button: #A32035;
+  --dark-blue: #181826;
+  --dark: #485787;
+  --dark-sky: #0284c7;
+  --darkie: #F3F5FA;
+  /* Gradients VARIANTE CON VARS CON PURO CSS*/
+  --purple-to-blue: linear-gradient(to right, var(--purple), var(--blue));
+  --blue-to-green: linear-gradient(to right, #28b6f9, #4ade80);
+  --fusia-to-teal: linear-gradient(to right, var(--fusia), var(--teal));
+  --fusia-to-teal: linear-gradient(to right, var(--fusia), var(--teal));
+  --green-to-yellow: linear-gradient(to right, #4ade80, #eab308);
+  --yellow-to-red: linear-gradient(to right, #eab308, #f87171);
+  --red-to-purple: linear-gradient(to right, #f87171, #c084fc);
+  --purple-to-gray: linear-gradient(to right, #c084fc, #a1a1aa);
+  --gray-to-dark-blue: linear-gradient(to right, #a1a1aa, #3730a3);
+  --dark-blue-to-dark-sky: linear-gradient(to right, #3730a3, #0284c7);
+  --dark-sky-to-darkie: linear-gradient(to right, #0284c7, #e2e8f0);
+  --darkie-to-dark: linear-gradient(to right, #e2e8f0, #64748b);
+  --dark-to-blue: linear-gradient(to right, #64748b, #2563eb);
+  --blue-to-dark: linear-gradient(to right,  #2563eb, #64748b);
+  --blue-to-yellow: linear-gradient(to right, #2563eb, #ca8a04);
+  --yellow-to-green: linear-gradient(to right, #ca8a04, #22c55e);
+  --green-to-red: linear-gradient(to right, #22c55e, #ef4444);
+  --red-to-gray: linear-gradient(to right, #ef4444, #71717a);
+  --gray-to-purple: linear-gradient(to right, #71717a, #8b5cf6);
+  --banhcoffee: linear-gradient(to right, var(--red-banhcafe), var(--blue));
+}
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* background: var(--purple-to-blue); */
+  }
+  body.dark{
+    background: var(--purple-to-blue);
+
+  }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--primary);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--primary);
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 14px;
+  border: 3px solid var(--primary);
+}
+/*= *{
+  overflow-x: hidden;
+  
+} */
+
+/* .drawer-content {
+  max-height: 100vh !important;
+  overflow-y: auto !important;
+} */
+
+/* drawerButton.css */
+
+.markdown{
+  max-width: 100% !important;
+}
